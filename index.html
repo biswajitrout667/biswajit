@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banking System Management Using OOP in C++</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white py-6 shadow-lg">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">Banking System Management Using OOP in C++</h1>
+      <p class="text-lg mt-2">Managing Savings, Current & Loan Accounts Securely</p>
+      <p class="mt-1">Presented by: <span class="font-semibold">Biswajit Rout</span> | Dept. of Computer Science & Engineering, VSSUT Burla</p>
+    </div>
+  </header>
+
+  <!-- Hero Section with Image -->
+  <section class="relative bg-blue-100 py-10">
+    <div class="container mx-auto text-center">
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80" alt="Banking" class="rounded-2xl mx-auto shadow-lg w-full md:w-3/4 mb-6">
+      <h2 class="text-2xl font-bold text-blue-700">A Secure and Scalable Approach for Financial Software</h2>
+      <p class="text-gray-700 mt-2">Explore how Object-Oriented Programming strengthens the reliability of banking systems.</p>
+    </div>
+  </section>
+
+  <!-- Login Section -->
+  <section class="bg-white py-10">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">User Login</h2>
+      <p class="text-gray-600 mb-6">(Dummy interface for demonstration only)</p>
+      <div class="max-w-sm mx-auto bg-gray-100 p-6 rounded-2xl shadow-md">
+        <form>
+          <input type="text" placeholder="Username" class="w-full mb-4 p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <input type="password" placeholder="Password" class="w-full mb-4 p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full">Login</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <main class="container mx-auto px-6 py-10 space-y-10">
+    <section class="text-center">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">Introduction & Scope</h2>
+      <p class="max-w-3xl mx-auto">A banking system is the core engine managing all customer accounts, transactions, and balances. The design emphasizes security, accuracy, and speed through modular and secure architecture—essential for all modern financial services.</p>
+    </section>
+
+    <!-- Objectives -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4 text-center">Objectives</h2>
+      <ul class="list-disc list-inside max-w-3xl mx-auto space-y-2">
+        <li>Design a secure system ensuring data integrity and confidentiality using C++ OOP.</li>
+        <li>Handle multiple account types like Savings, Current, and Loan accounts efficiently.</li>
+        <li>Process transactions safely with validation and atomic updates.</li>
+      </ul>
+    </section>
+
+    <!-- OOP Principles -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4 text-center">OOP Principles Applied</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white shadow p-5 rounded-xl">
+          <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" alt="Encapsulation" class="w-16 mx-auto mb-3">
+          <h3 class="font-semibold text-lg">Encapsulation</h3>
+          <p>Secures sensitive data by restricting direct access through private members and public methods.</p>
+        </div>
+        <div class="bg-white shadow p-5 rounded-xl">
+          <img src="https://cdn-icons-png.flaticon.com/512/3176/3176363.png" alt="Inheritance" class="w-16 mx-auto mb-3">
+          <h3 class="font-semibold text-lg">Inheritance</h3>
+          <p>Allows specialized accounts (Savings, Current, Loan) to extend a base <em>Account</em> class, promoting code reuse.</p>
+        </div>
+        <div class="bg-white shadow p-5 rounded-xl">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Polymorphism" class="w-16 mx-auto mb-3">
+          <h3 class="font-semibold text-lg">Polymorphism</h3>
+          <p>Enables account-specific behaviors, such as varying withdrawal rules across account types.</p>
+        </div>
+        <div class="bg-white shadow p-5 rounded-xl">
+          <img src="https://cdn-icons-png.flaticon.com/512/3121/3121621.png" alt="Abstraction" class="w-16 mx-auto mb-3">
+          <h3 class="font-semibold text-lg">Abstraction</h3>
+          <p>Hides complex internal logic, offering users simple interfaces for essential banking operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4 text-center">System Workflow</h2>
+      <div class="text-center max-w-2xl mx-auto">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965875.png" alt="Workflow" class="w-20 mx-auto mb-3">
+        <p>User Login → Select Account → Choose Operation → Validate Transaction → Transaction Confirmation</p>
+        <p class="mt-2 text-gray-600">Each step integrates security validation through OOP-driven methods.</p>
+      </div>
+    </section>
+
+    <!-- Implementation -->
+    <section>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4 text-center">Implementation Overview</h2>
+      <ul class="list-disc list-inside max-w-3xl mx-auto space-y-2">
+        <li><strong>Account (Base):</strong> Abstract class with attributes and virtual functions like <em>CalculateInterest()</em>.</li>
+        <li><strong>SavingsAccount:</strong> Handles interest and minimum balance rules.</li>
+        <li><strong>CurrentAccount:</strong> Manages overdrafts and frequent transactions.</li>
+        <li><strong>LoanAccount:</strong> Tracks principal, interest, and repayments.</li>
+        <li><strong>Transaction Class:</strong> Controls deposit, withdrawal, and transfer operations securely.</li>
+      </ul>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="bg-blue-50 p-6 rounded-xl text-center shadow">
+      <h2 class="text-2xl font-bold text-blue-700 mb-3">Conclusion</h2>
+      <img src="https://cdn-icons-png.flaticon.com/512/1040/1040262.png" alt="Security" class="w-16 mx-auto mb-3">
+      <p>The Object-Oriented approach in C++ offers a robust foundation for building reliable, scalable, and secure financial systems. It ensures 100% data protection, 5× modularity, and infinite extendability.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center py-4">
+    <p>&copy; 2025 Banking System Management Project | Developed by Biswajit Rout</p>
+  </footer>
+</body>
+</html>
